@@ -13,7 +13,7 @@ const App = () => {
 
 const getData=async()=>{
   try {
-    let res=await axios.get('http://localhost:3000/getData')
+    let res=await axios.get('https://photo-gallery-1.onrender.com/getData')
   // console.log(res.data.data);
   setPhotos(res.data.data)
   // message.success('Successfully Fetched')

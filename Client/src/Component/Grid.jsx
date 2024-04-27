@@ -7,7 +7,7 @@ const Grid = ({photos}) => {
 
   const handleDelete=async(id)=>{
     try {
-      let res=await axios.delete(`http://localhost:3000/remove/${id}`)
+      let res=await axios.delete(`https://photo-gallery-1.onrender.com/remove/${id}`)
       console.log(res.data)
       message.success(res.data.message)
       window.location.reload()
