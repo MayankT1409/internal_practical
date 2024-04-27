@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors()) 
 app.use(express.static('public')) // now Public is being hosted by express statically
 
-const PORT= process.env.PORT || 3000
+const PORT= process.env.PORT
 
 app.use('/', router)
 

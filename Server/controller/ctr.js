@@ -43,13 +43,13 @@ const uploads=async(req,res)=>{
        const photo =req.file.filename
     //    console.log("photo", photo);
        let data=await schema.create({photo})
-       console.log("data", data);
+    //    console.log("data", data);
        res.status(200).send({
         success:true,
         message:"Successfully Uploded",
         data
        })
-
+// localStorage.setItem("magi")
     } catch (error) {
         console.log(error);
         res.status(500).send({

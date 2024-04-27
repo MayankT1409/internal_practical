@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from 'axios'
 import {message} from 'antd'
 
@@ -7,6 +7,7 @@ const Button = () => {
   const handleChange =async (e) => {
     try {
         e.preventDefault();
+        console.log('e',e.target.files);
 
     const formData=new FormData();
     formData.append('photo', e.target.files[0])
@@ -16,12 +17,17 @@ const Button = () => {
     message.success(res.data.message)
     window.location.reload()
 
+
     } catch (error) {
         console.log(error);
         message.error(`${error}`)
     }
 
   };
+
+  // useEffect(()=>{
+  //   handleChange()
+  // },[])
 
   return (
     <>
@@ -32,10 +38,11 @@ const Button = () => {
         </span>
         <input
           hidden
+          // multiple
           type="file"
           name="file_picker"
           id="file_picker"
-          onChange={(e) => handleChange(e)}
+          onChange={(e) => handleChange(e) }
         />
       </label>
     </>

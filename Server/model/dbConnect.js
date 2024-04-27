@@ -4,7 +4,7 @@ import colors from 'colors'
 
 dotenv.config()
 
-let connection= 'mongodb+srv://mangala214128pa:maggi12@cluster0.u3upwel.mongodb.net/photoGallery'
+let connection= `${process.env.DB_URL}/${process.env.DB_NAME}`
 
 mongoose.connect(connection).then(()=>console.log("DB is Connected with Server".bgRed)).catch((err)=>console.log(err))
 
