@@ -28,7 +28,7 @@ const Grid = ({photos}) => {
                 photos.map((e, i)=>(
                     <div className="col-10 col-sm-10 col-md-6 col-lg-4 col-xl-3 mx-auto my-5" key={i}>
                     <div className="card">
-                    <img src={`http://localhost:3000/uploads/${e.photo}`} className="card-img-top" height='300' width={50} alt="Image"/>
+                    <img src={`https://photo-gallery-1.onrender.com/uploads/${e.photo}`} className="card-img-top" height='300' width={50} alt="Image"/>
                     <div className="card-body">
                       <button className='btn btn-primary' onClick={()=>handleDelete(e._id)}><i className="fa-solid fa-trash"></i></button>
                     </div>
