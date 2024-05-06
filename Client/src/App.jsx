@@ -4,6 +4,7 @@ import Button from './Component/Button'
 import Grid from './Component/Grid'
 import axios from 'axios'
 import { message } from 'antd'
+import Footer from './Component/Footer'
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const getData=async()=>{
     <Navbar/>
     <Button/>
     <Grid photos={photos}/>
+    <Footer/>
     </>
   )
 }

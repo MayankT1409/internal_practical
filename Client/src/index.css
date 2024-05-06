@@ -30,6 +30,7 @@ body{
 }
 .grid{
     margin-top: 3em;
+    margin-bottom:10em ;
     text-align:left;
     color: rgb(13,202,240);
 }
@@ -58,4 +59,11 @@ body{
 .card-body i{
     padding: .5em;
     font-size: 15px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 5em
 }
